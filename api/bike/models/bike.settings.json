@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bikes",
+  "info": {
+    "name": "Bike"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Price": {
+      "type": "integer"
+    },
+    "Discount": {
+      "type": "integer"
+    },
+    "categories": {
+      "via": "bikes",
+      "collection": "category"
+    },
+    "project": {
+      "via": "bikes",
+      "model": "project"
+    }
+  }
+}
