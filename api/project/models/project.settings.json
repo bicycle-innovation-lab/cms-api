@@ -10,8 +10,8 @@
   },
   "attributes": {
     "bikes": {
-      "collection": "bike",
-      "via": "project"
+      "via": "project",
+      "collection": "bike"
     },
     "name": {
       "type": "string",

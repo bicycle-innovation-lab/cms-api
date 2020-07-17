@@ -9,13 +9,13 @@
     "timestamps": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "richtext"
     },
-    "Images": {
+    "images": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -26,19 +26,22 @@
       "plugin": "upload",
       "required": false
     },
-    "Price": {
+    "price": {
       "type": "integer"
     },
-    "Discount": {
+    "discount": {
       "type": "integer"
     },
     "categories": {
-      "via": "bikes",
-      "collection": "category"
+      "collection": "category",
+      "via": "bikes"
     },
     "project": {
-      "via": "bikes",
-      "model": "project"
+      "model": "project",
+      "via": "bikes"
+    },
+    "selling": {
+      "type": "boolean"
     }
   }
 }

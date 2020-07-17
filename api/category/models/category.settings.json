@@ -9,15 +9,15 @@
     "timestamps": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Image": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -29,8 +29,8 @@
       "required": false
     },
     "bikes": {
-      "collection": "bike",
       "via": "categories",
+      "collection": "bike",
       "dominant": true
     }
   }
